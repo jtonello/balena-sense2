@@ -26,8 +26,4 @@ COPY ./scripts ./scripts
 COPY ./entry.sh /usr/src/app/
 RUN chmod +x /usr/src/app/entry.sh
 
-#LCD bits
-#RUN git clone git://github.com/adafruit/Adafruit_Python_GPIO
-#RUN cd Adafruit_Python_GPIO && python3 setup.py install
-
 CMD ["./entry.sh"]
