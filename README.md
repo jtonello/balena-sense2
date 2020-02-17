@@ -1,6 +1,6 @@
 ## balenaSense with LCD display
 
-This project uses a standard LCD display configured according to this diagram:
+This project uses a standard 16x2 LCD display and a DS18B20 (w1) sensor configured according to this diagram:
 ![Circuit](https://circuitdigest.com/sites/default/files/circuitdiagram_mic/Circuit-Diagram-for-Interfacing-DS18B20-Temperature-Sensor-with-Raspberry-Pi.png)
 
 It's based on this [CircuitDigest blog post](https://circuitdigest.com/microcontroller-projects/raspberry-pi-ds18b20-temperature-sensor-interfacing).
