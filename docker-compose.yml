@@ -1,0 +1,17 @@
+version: '2'
+services:
+  sensor:
+    build: ./sensor-w1
+    privileged: true
+    restart: always
+    volumes:
+      - 'sense-data:/data'
+
+  telegraf:
+    build: ./telegraf
+    restart: always
+    cap_add:
+      - SYS_ADMIN
+
+volumes:
+  sense-data:
