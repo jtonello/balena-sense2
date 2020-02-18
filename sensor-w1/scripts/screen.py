@@ -74,7 +74,8 @@ def main():
         localtempC = datat['temperature']
 
         # Get the humidity from the DHT11 sensor running on another device
-        remotehumidityURL = "http://10.128.1.131:8989/humidity"
+        # Add Device Environment Variable REMOTE_HUMIDITY_URL in balenaDashboard, i.e. http://192.168.1.44/humidity
+        remotehumidityURL = os.environ['REMOTE_HUMIDITY_URL']
         h = requests.get(remotehumidityURL)
 
         try:
