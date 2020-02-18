@@ -76,20 +76,24 @@ def main():
         # Get the humidity from the DHT11 sensor running on another device
         # Add Device Environment Variable REMOTE_HUMIDITY_URL in balenaDashboard, i.e. http://192.168.1.44/humidity
         remotehumidityURL = os.environ['REMOTE_HUMIDITY_URL']
-        h = requests.get(remotehumidityURL)
 
-        try:
-            json.loads(h.text)
-            datah = h.json()
-            remotehumidity = datah['humidity']
-            lcd_text("Humidity:",LCD_LINE_1)
-            lcd_text('%.1f' % remotehumidity,LCD_LINE_2)
+        if len(remotehumidityURL) > 0:
+            h = requests.get(remotehumidityURL)
 
-            time.sleep(3)
-        except:
-            print('Humidity feed error')
+            try:
+                json.loads(h.text)
+                datah = h.json()
+                remotehumidity = datah['humidity']
 
-        # Output to the LCD display
+                # Output remote humidity reading to the LCD display
+                lcd_text("Humidity:",LCD_LINE_1)
+                lcd_text('%.1f' % remotehumidity,LCD_LINE_2)
+
+                time.sleep(3)
+            except:
+                print('Humidity feed error')
+
+        # Output local temperature reading to the LCD display
         lcd_text("Temperature:",LCD_LINE_1)
         lcd_text('%.1f F' % localtempF,LCD_LINE_2)
 
