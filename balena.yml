@@ -1,0 +1,6 @@
+applicationEnvironmentVariables:
+    - DISABLE_INTERNAL_INFLUXDB: TRUE
+    - INFLUXDB_EXTERNAL_PASSWORD: password
+    - INFLUXDB_EXTERNAL_URL: http://10.128.1.136:8086
+    - INFLUXDB_EXTERNAL_USERNAME: jtonello
+    - REMOTE_HUMIDITY_URL: http://10.128.1.136:8989/humidity
