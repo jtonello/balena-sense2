@@ -10,4 +10,4 @@ It also takes advantage of this Python script to drive the LCD:
 
 Check out the full [balenaSense](https://github.com/balenalabs/balena-sense) project.
 
-```[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)``` 
+[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
