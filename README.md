@@ -9,3 +9,5 @@ It also takes advantage of this Python script to drive the LCD:
 [https://www.mbtechworks.com/files/lcd1602.py](https://www.mbtechworks.com/files/lcd1602.py)
 
 Check out the full [balenaSense](https://github.com/balenalabs/balena-sense) project.
+
+```[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)``` 
